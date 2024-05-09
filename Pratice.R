@@ -82,3 +82,7 @@ cvResults<-suppressWarnings(CVlm(data = cars, form.lm = dist~speed, m=5, dots =F
                                  seed = 29, legend.pos = "topleft", printit = FALSE,
                                  main = "Small Symbols are predicted vales while bigger ones are actuals"))
 cvResults
+
+saveRDS(lr_model,"./cars_model.rds")
+lr_model_1<-readRDS("./cars_model.rds")
+lr_model_1
